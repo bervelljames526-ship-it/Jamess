@@ -83,6 +83,46 @@
             margin-right: 10px;
         }
 
+        .top-bar {
+            background-color: var(--secondary);
+            color: var(--light);
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-info {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-bar-info a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .top-bar-info a:hover {
+            color: var(--highlight);
+        }
+
+        .top-bar-info i {
+            margin-right: 5px;
+        }
+
+        .discount-banner {
+            background-color: var(--accent);
+            color: white;
+            padding: 5px 0;
+            text-align: center;
+            font-weight: 600;
+        }
+
         nav ul {
             display: flex;
             list-style: none;
@@ -238,6 +278,44 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
+        /* Services Section */
+        .services {
+            background-color: white;
+            padding: 60px 0;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .service-item {
+            padding: 20px;
+        }
+
+        .service-icon {
+            background-color: var(--secondary);
+            color: var(--highlight);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 28px;
+        }
+
+        .service-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
         /* Categories Section */
         .section-title {
             text-align: center;
@@ -384,6 +462,12 @@
             font-weight: 600;
         }
 
+        .product-rating {
+            color: var(--highlight);
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
         .product-price {
             color: var(--primary);
             font-weight: 700;
@@ -395,6 +479,13 @@
             font-size: 14px;
             font-weight: 400;
             color: #777;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999 !important;
+            font-size: 16px !important;
+            margin-right: 10px;
         }
 
         .add-to-cart {
@@ -413,6 +504,205 @@
 
         .add-to-cart:hover {
             background-color: var(--primary);
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--light);
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-content h2 span {
+            color: var(--highlight);
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background-color: #f9f9f9;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 18px;
+            color: var(--primary);
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s;
+        }
+
+        .faq-answer.active {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--secondary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-item {
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            margin: 0 15px;
+            display: none;
+        }
+
+        .testimonial-item.active {
+            display: block;
+        }
+
+        .testimonial-text {
+            font-size: 18px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--highlight);
+        }
+
+        .testimonial-rating {
+            color: var(--highlight);
+            margin-bottom: 10px;
+        }
+
+        .slider-controls {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .slider-controls button {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .slider-controls button:hover {
+            background-color: var(--highlight);
+        }
+
+        /* Business Hours */
+        .hours-section {
+            background-color: var(--light);
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+
+        .hours-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hours-list {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .hours-list h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 10px;
+        }
+
+        .hours-list ul {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        .day {
+            font-weight: 600;
         }
 
         /* Contact Section */
@@ -520,7 +810,8 @@
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 12px 15px;
             border: 1px solid #ddd;
@@ -614,6 +905,13 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 14px;
             opacity: 0.8;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 200px;
         }
 
         /* Cart Modal */
@@ -719,6 +1017,37 @@
             background-color: var(--accent);
         }
 
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
         /* Responsive Styles */
         @media (max-width: 992px) {
             .hero h2 {
@@ -780,6 +1109,10 @@
                 font-size: 14px;
                 margin-left: 10px;
             }
+            
+            .top-bar {
+                display: none;
+            }
         }
 
         @media (max-width: 480px) {
@@ -802,6 +1135,27 @@
     </style>
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="top-bar-info">
+                <a href="tel:+233537137623"><i class="fas fa-phone"></i> +233 53 713 7623</a>
+                <a href="mailto:bervelljames526@gmail.com"><i class="fas fa-envelope"></i> bervelljames526@gmail.com</a>
+                <span><i class="fas fa-map-marker-alt"></i> Jubilee Hall, University of Ghana</span>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/233537137623" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discount Banner -->
+    <div class="discount-banner">
+        <p>🎉 GRAND OPENING SALE: 15% OFF ALL ORDERS THIS WEEK! USE CODE: JBS15 🎉</p>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container header-container">
@@ -821,6 +1175,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#categories">Categories</a></li>
                     <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -843,6 +1198,42 @@
             <h2>PREMIUM MEN'S <span>ESSENTIALS</span></h2>
             <p>Your ultimate destination for quality shirts, jewelry, grooming products, and phone accessories. All in one place, all for the modern man.</p>
             <a href="#categories" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Free Delivery</h3>
+                    <p>Free delivery on orders over GHS 200 within UG Campus</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>7-day return policy for all products</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>100% secure payment with multiple options</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>WhatsApp support available anytime</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -902,7 +1293,17 @@
                 <div class="product-content">
                     <div class="product-category">Shirts</div>
                     <h3 class="product-title">Premium Cotton Polo</h3>
-                    <div class="product-price">GHS 120.00</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        (24)
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">GHS 150.00</span> GHS 120.00
+                    </div>
                     <button class="add-to-cart" data-product="Premium Cotton Polo" data-price="120">Add to Cart</button>
                 </div>
             </div>
@@ -913,6 +1314,14 @@
                 <div class="product-content">
                     <div class="product-category">Jewelry</div>
                     <h3 class="product-title">Leather & Steel Bracelet</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        (18)
+                    </div>
                     <div class="product-price">GHS 85.00</div>
                     <button class="add-to-cart" data-product="Leather & Steel Bracelet" data-price="85">Add to Cart</button>
                 </div>
@@ -923,18 +1332,200 @@
                 <div class="product-content">
                     <div class="product-category">Grooming</div>
                     <h3 class="product-title">Premium Beard Oil Set</h3>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        (32)
+                    </div>
                     <div class="product-price">GHS 65.00</div>
                     <button class="add-to-cart" data-product="Premium Beard Oil Set" data-price="65">Add to Cart</button>
                 </div>
             </div>
             
             <div class="product-card">
+                <div class="product-badge">SALE</div>
                 <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Phone Case" class="product-img">
                 <div class="product-content">
                     <div class="product-category">Accessories</div>
                     <h3 class="product-title">Rugged Phone Case</h3>
-                    <div class="product-price">GHS 45.00</div>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        (41)
+                    </div>
+                    <div class="product-price">
+                        <span class="old-price">GHS 60.00</span> GHS 45.00
+                    </div>
                     <button class="add-to-cart" data-product="Rugged Phone Case" data-price="45">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="About JB'S ONE-STOP SHOP">
+            </div>
+            <div class="about-content">
+                <h2>About <span>JB'S ONE-STOP SHOP</span></h2>
+                <p>Founded in 2023 at the University of Ghana, JB'S ONE-STOP SHOP was created to provide students and the community with access to quality men's apparel and accessories at affordable prices.</p>
+                <p>We specialize in curating the best selection of shirts, jewelry, grooming products, and phone accessories specifically tailored for the modern Ghanaian man.</p>
+                <p>Our mission is to simplify your shopping experience by offering everything you need in one convenient location, both physically at Jubilee Hall and through our online store.</p>
+                <p>We pride ourselves on excellent customer service, quality products, and building lasting relationships with our customers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Hours Section -->
+    <section class="hours-section">
+        <div class="container hours-container">
+            <div class="hours-list">
+                <h3>Business Hours</h3>
+                <ul>
+                    <li>
+                        <span class="day">Monday - Friday</span>
+                        <span class="time">9:00 AM - 8:00 PM</span>
+                    </li>
+                    <li>
+                        <span class="day">Saturday</span>
+                        <span class="time">10:00 AM - 6:00 PM</span>
+                    </li>
+                    <li>
+                        <span class="day">Sunday</span>
+                        <span class="time">12:00 PM - 5:00 PM</span>
+                    </li>
+                    <li>
+                        <span class="day">Public Holidays</span>
+                        <span class="time">By Appointment</span>
+                    </li>
+                </ul>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.6151537514923!2d-0.19642292453560975!3d5.650676933896788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9c5d7c8a5b0b%3A0x362de4e4d0b5f5b9!2sUniversity%20of%20Ghana!5e0!3m2!1sen!2sgh!4v1691000000000!5m2!1sen!2sgh" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>Visit Our <span>Store</span></h2>
+                <p>Come visit us at our convenient location in Jubilee Hall at the University of Ghana. We're right in the heart of campus, making it easy for students to stop by between classes.</p>
+                <p>At our physical store, you can:</p>
+                <ul style="list-style: none; margin: 20px 0;">
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Try on clothes before buying</li>
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Get personalized style advice</li>
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> See and feel product quality firsthand</li>
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Pick up online orders</li>
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Enjoy same-day exchanges</li>
+                </ul>
+                <p>We also offer special student discounts for University of Ghana students with valid ID cards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Customer Reviews</h2>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-item active">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best place to shop on campus! Got a great shirt and phone case. Quality is excellent and prices are student-friendly."</p>
+                    <p class="testimonial-author">- Kwame Mensah, UG Student</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"The beard oil set changed my grooming game. Delivery was fast and the WhatsApp customer service is top-notch!"</p>
+                    <p class="testimonial-author">- Michael Osei, Legon</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Finally found quality men's jewelry in Ghana! The leather bracelet is my new favorite accessory. Highly recommend!"</p>
+                    <p class="testimonial-author">- David Ampofo, Accra</p>
+                </div>
+                <div class="slider-controls">
+                    <button id="prevTestimonial"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextTestimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept mobile money (MTN & Vodafone cash), bank transfers, cash on delivery (within UG campus), and cash payments at our physical store.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does delivery take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Delivery within University of Ghana campus: Same day if ordered before 2 PM. Delivery in Accra: 1-2 business days. Other regions: 3-5 business days.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer student discounts?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! University of Ghana students with valid ID cards receive a 10% discount on all purchases at our physical store.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is your return policy?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a 7-day return policy for unused items with original packaging. Items must be in original condition. For hygiene reasons, grooming products cannot be returned once opened.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I place an order via WhatsApp?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! You can browse our catalog and place orders directly through WhatsApp at +233 53 713 7623. We'll guide you through the ordering process.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -954,7 +1545,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Our Location</h4>
-                            <p>Jubilee Hall, University of Ghana</p>
+                            <p>Jubilee Hall, University of Ghana, Legon</p>
                         </div>
                     </div>
                     
@@ -977,6 +1568,16 @@
                             <p>bervelljames526@gmail.com</p>
                         </div>
                     </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Business Hours</h4>
+                            <p>Mon-Fri: 9AM-8PM | Sat: 10AM-6PM | Sun: 12PM-5PM</p>
+                        </div>
+                    </div>
                 </div>
                 
                 <a href="https://wa.me/233537137623" class="whatsapp-contact" target="_blank">
@@ -995,6 +1596,22 @@
                     <div class="form-group">
                         <label for="email">Email Address</label>
                         <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject">
+                            <option value="order">Order Inquiry</option>
+                            <option value="product">Product Question</option>
+                            <option value="delivery">Delivery Information</option>
+                            <option value="return">Return/Exchange</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
                     
                     <div class="form-group">
@@ -1029,15 +1646,15 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#categories">Categories</a></li>
                         <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">About Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Customer Service</h3>
                     <ul class="footer-links">
-                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                         <li><a href="#">Shipping & Delivery</a></li>
                         <li><a href="#">Returns & Exchanges</a></li>
                         <li><a href="#">Size Guide</a></li>
@@ -1049,17 +1666,24 @@
                     <h3>Payment Methods</h3>
                     <p>We accept various payment methods for your convenience.</p>
                     <div class="payment-methods">
+                        <i class="fas fa-money-bill-wave" title="Cash"></i>
+                        <i class="fas fa-mobile-alt" title="Mobile Money"></i>
+                        <i class="fas fa-university" title="Bank Transfer"></i>
                         <i class="fab fa-cc-mastercard" title="Mastercard"></i>
                         <i class="fab fa-cc-visa" title="Visa"></i>
-                        <i class="fab fa-cc-paypal" title="PayPal"></i>
-                        <i class="fas fa-mobile-alt" title="Mobile Money"></i>
-                        <i class="fas fa-money-bill-wave" title="Cash"></i>
                     </div>
+                    <h3 style="margin-top: 20px;">Newsletter</h3>
+                    <p>Subscribe for updates and exclusive offers</p>
+                    <form id="newsletterForm" style="margin-top: 10px;">
+                        <input type="email" placeholder="Your email" style="width: 100%; padding: 10px; border-radius: 4px; border: 1px solid #555; margin-bottom: 10px;">
+                        <button type="submit" class="cta-button" style="width: 100%; padding: 10px;">Subscribe</button>
+                    </form>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 JB'S ONE-STOP SHOP. All rights reserved. | Located at Jubilee Hall, University of Ghana</p>
+                <p>&copy; 2023 JB'S ONE-STOP SHOP. All rights reserved. | Located at Jubilee Hall, University of Ghana | Phone: +233 53 713 7623</p>
+                <p style="margin-top: 10px;">Website designed for the modern Ghanaian man</p>
             </div>
         </div>
     </footer>
@@ -1081,6 +1705,11 @@
         </div>
         
         <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
     </div>
 
     <script>
@@ -1202,11 +1831,104 @@
             e.preventDefault();
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
             const message = document.getElementById('message').value;
             
             // In a real application, you would send this to a server
-            alert(`Thank you for your message, ${name}! We'll get back to you soon at ${email}.`);
+            alert(`Thank you for your message, ${name}! We'll get back to you soon at ${email} or ${phone}.`);
             contactForm.reset();
+        });
+        
+        // Newsletter Form Submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = newsletterForm.querySelector('input[type="email"]').value;
+                
+                alert(`Thank you for subscribing with ${email}! You'll receive our updates soon.`);
+                newsletterForm.reset();
+            });
+        }
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                
+                // Close all FAQ answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('active');
+                });
+                
+                // Remove active class from all questions
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                });
+                
+                // If this answer wasn't active, open it
+                if (!isActive) {
+                    answer.classList.add('active');
+                    question.classList.add('active');
+                }
+            });
+        });
+        
+        // Testimonial Slider
+        const testimonials = document.querySelectorAll('.testimonial-item');
+        const prevBtn = document.getElementById('prevTestimonial');
+        const nextBtn = document.getElementById('nextTestimonial');
+        let currentTestimonial = 0;
+        
+        function showTestimonial(index) {
+            testimonials.forEach(testimonial => {
+                testimonial.classList.remove('active');
+            });
+            
+            testimonials[index].classList.add('active');
+            currentTestimonial = index;
+        }
+        
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                let newIndex = currentTestimonial - 1;
+                if (newIndex < 0) newIndex = testimonials.length - 1;
+                showTestimonial(newIndex);
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                let newIndex = currentTestimonial + 1;
+                if (newIndex >= testimonials.length) newIndex = 0;
+                showTestimonial(newIndex);
+            });
+            
+            // Auto-rotate testimonials every 5 seconds
+            setInterval(() => {
+                let newIndex = currentTestimonial + 1;
+                if (newIndex >= testimonials.length) newIndex = 0;
+                showTestimonial(newIndex);
+            }, 5000);
+        }
+        
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
         
         // Initialize cart display on page load
